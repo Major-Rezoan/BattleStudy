@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Battle Studies">
+	<meta name="keywords" content="battle studies,famous battles, military biography">
+  <meta name="author" content="Major Rezoan">
+
+  <title>Battle Studies</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/sign-in.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <ul class="nav navbar-nav ml-auto">
+      <a class="navbar-brand js-scroll-trigger" href="#" onclick="showCoverpage()">Battle Studies</a>
+    </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+   <div id="coverpage">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-heading text-uppercase">Welcome To Battle Studies</div>
+        <div class="intro-lead-in">Enrich Your Knowledge on War Leaders and Military Campaigns</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#" onclick="showSignin()">ENTER</a>
+      </div>
+    </div>
+   </div>
+
+  <div id="signin-form">
+   <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin" id="signInForm">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+
+              <div class="form-label-group">
+                <a class="card-links" href="#">Forgot password?</a>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="login()">Sign in</button>
+               <hr>
+               <div class="form-label-group">
+                 <li class="text-center">Are You New Here?</li>
+               </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" href= "#" onclick="showSignUp()">Sign Up</button>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+            </form>
+           </div>
+          </div>
+        </div>
+       </div>
+     </div>
+   </div>
+
+   <div id="signup-form">
+    <div class="container">
+     <div class="row">
+       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+         <div class="card card-signin my-5">
+           <div class="card-body">
+             <h5 class="card-title text-center">Sign Up</h5>
+             <form id="signupForm" class="form-signin">
+
+               <div class="form-label-group">
+                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputUserame">Username</label>
+              </div>
+              <div class="form-label-group">
+                <input type="email" id="inputUserEmail" class="form-control" placeholder="Email address" required>
+                <label for="inputUserEmail">Email address</label>
+              </div>
+              <hr>
+              <div class="form-label-group">
+                <input type="password" id="inputUserPassword" class="form-control" placeholder="Password" required onkeyup='check();'>
+                <label for="inputUserPassword">Password</label>
+              </div>
+              <span id='message'></span>
+              <div class="form-label-group">
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required onkeyup='check();'>
+                <label for="inputConfirmPassword">Confirm password</label>
+              </div>
+               <div class="alert">Your account is ready. Please log in.</div>
+               <button class="btn btn-lg btn-primary btn-block text-uppercase" href= "#" onclick="handleSignUp()" >Sign Up</button>
+               <button class="btn btn-lg btn-primary btn-block text-uppercase" href= "#" onclick="showSignin()">Sign In</button>
+               <hr class="my-4">
+               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+             </form>
+            </div>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="page-section clearfix">
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Our Contents</h2>
+        <hr>
+        <p align="justify">Military history is widely studied at military academies and services schools because the military command seeks to not repeat thier past mistakes. It also helps to improve upon current performance by instilling an ability in commanders to perceive historical parallels during a battle, so as to capitalize on the lessons learned from the past.</p>
+        <p align="justify">People interested in military history will find a huge collection of books, publications, documents and presentations on various historical battles and campaigns in this site. Sign in now to access our huge collection today. </p>
+        <a class="btn btn-primary btn-lg" href="#" onclick="showSignin()">Sign In Now &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Insight</h2>
+        <hr>
+        <img class="card" src="img\bg.gif" alt=""></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="./img/logo_war.png" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Battles and Campaigns</h4>
+            <p class="card-text" align="justify">A victory in the battle is achieved when one force is superior to other in terms of knowledge. This section contains various contents related to historical battles.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary" onclick="showSignin()">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="./img/logo_ldr.png" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Military Leaders</h4>
+            <p class="card-text" align="justify">Famous and revolutionary leaders are always a subject of study for a man in uniform. We have a good number of biographies and leadership analysis here.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary" onclick="showSignin()">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="./img/logo_books.png" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Books and Journals</h4>
+            <p class="card-text" align="justify">We have an unique collection of famous books and journals in this section. It also contains publications and write ups by intellectuals on their studies related to military history. </p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary" onclick="showSignin()">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+    <h2><span class="text-uppercase">Latest Inclusions</span></h2>
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url(Items/Khandak.jpg)">
+        <div class="overlay">
+         <div class="carousel-caption d-none d-md-block">
+           <h3 class="display-4">Battle Of Khandak</h3>
+           <p class="lead"> The 30-day-long siege of Yathrib (now Medina) by Arab and Jewish tribes.</p>
+         </div>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url(Items/Alex.jpg)">
+       <div class="overlay">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Alexander the Great</h3>
+          <p class="lead">Who earned the epithet "the Great" for his unparalleled success as a leader.</p>
+        </div>
+       </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url(Items/Defeat.jpg)">
+       <div class="overlay">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Defeat Into Victory</h3>
+          <p class="lead">A classic account of the Burma campaign by British Field Marshal William Slim.</p>
+        </div>
+       </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container  text-center">
+      <span class="copyright">Copyright &copy; Major Rezoan</span>
+    </div>
+  </footer>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-auth.js"></script>
+
+  <script src="login.js"></script>
+  <script src="main.js"></script>
+  <script src="signup.js"></script>
+
+</body>
+
+</html>

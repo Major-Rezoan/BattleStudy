@@ -1,0 +1,74 @@
+{
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #1C7800;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  border: 1px dotted white;
+  padding: 20px 15px;
+}
+
+.content-table tbody tr {
+  background-color: #DCD01E;
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #B1DC1E;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1C7800;
+}
+
+.form-comment {
+  display:block;
+  width:50%;
+  padding:.375rem .75rem;
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.5;
+  color:#495057;
+  background-color:#FFF781;
+  background-clip:padding-box;
+  border:1px solid #ced4da;
+  border-radius:.25rem;
+  transition:border-color .15s ease-in-out,
+  box-shadow .15s ease-in-out}
+  @media (prefers-reduced-motion:reduce);
+}
+
+.content-comment {
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-comment th,
+.content-comment td {
+  border: 1px dotted white;
+  padding: 20px 15px;
+}
+
+.content-comment tbody tr {
+  background-color: #FFFB91;
+  border-bottom: 1px solid #dddddd;
+}
