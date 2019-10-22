@@ -22,12 +22,12 @@ function login(){
 });
 
 firebase.auth().onAuthStateChanged(function(user){
-	if (user) {
-    document.location.href="home.html";
+	if (UserEmail == "rezoan@gmail.com") {
+    document.location.href="adminhome.html";
 	}
-  else if(UserEmail == "rezoan@gmail.com" ){
+  else if(user){
     {
-      document.location.href="adminhome.html";
+      document.location.href="home.html";
     }
   }
 	else {
