@@ -38,13 +38,13 @@ function handleSignUp() {
   document.querySelector('.alert').style.display = 'block';
   setTimeout(function(){
     document.querySelector('.alert').style.display = 'none';
-  },3000);
+  },4000);
 
   document.getElementById('signupForm').reset();
 
   setTimeout(function(){
     document.location.href="index.html";
-  },3040);
+  },4080);
 };
 
 const signUpForm = document.querySelector("#signupForm");
