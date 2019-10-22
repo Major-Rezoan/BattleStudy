@@ -22,8 +22,14 @@
     var localmonth = snap.child("month").val();
     var month = "<span style='color:#049A0A;font-size:1.1rem'>"+ localmonth +"</span>";
     var year = snap.child("year").val();
+	var localhr = snap.child("hr").val();
+	var hr = "<span style='color:#9D7D1B;font-size:1.1rem'>"+ localhr +"</span>";
+	var localmin = snap.child("min").val();
+	var min = "<span style='color:#9D7D1B;font-size:1.1rem'>"+ localmin +"</span>";
+	var localsec = snap.child("sec").val();
+	var sec = "<span style='color:#9D7D1B;font-size:1.1rem'>"+ localsec +"</span>";
 
-    $("#table_body").append("<tr><td> On " + date + " " + month + " " + year + ", " + name + " commented: </td><td>" + message + "</td><td></td></tr>")
+    $("#table_body").append("<tr><td> On " + date + " " + month + " " + year + " at " + hr + ":" + min + ":" + sec + " hours" +  ", " + name + " commented: </td><td>" + message + "</td><td></td></tr>")
   });
 
   var messagesRef = firebase.database().ref('comments2');
@@ -43,10 +49,13 @@
     const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
     var month = monthNames[today.getMonth()];
     var year = today.getFullYear();
+	var hr = today.getHours();
+	var min = today.getMinutes();
+	var sec = today.getSeconds();
 
 
     // Save message
-    saveMessage(name, message, date, month, year);
+    saveMessage(name, message, date, month, year, hr, min, sec);
     // Clear form
     document.getElementById('contactForm').reset();
   }
@@ -57,13 +66,16 @@
   }
 
   // Save message to firebase
-  function saveMessage(name, message, date, month, year){
+  function saveMessage(name, message, date, month, year, hr, min, sec){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name: name,
       date: date,
       month: month,
       year: year,
+	  hr: hr,
+	  min: min,
+	  sec: sec,
       message: message
     });
   }
